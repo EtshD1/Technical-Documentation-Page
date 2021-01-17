@@ -24,9 +24,39 @@ article {
   padding-top: 2.5px;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid gray; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  align-items: center;
+}
+
 ol, ul {
   padding: 10px;
   padding-left: 30px;
+}
+
+
+nav ul {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: ease-in 0.3s;
+  height: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid gray;
 }
 
 main, section header {
@@ -36,4 +66,57 @@ main, section header {
 .block {
   padding-left: 30px;
   display: block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: teal;
+}
+
+.nav-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.burger > div {
+  padding-bottom: 4px;
+  border-bottom: 2px solid gray;
+  width: 20px;
+}
+
+.nav-close > div {
+  cursor: pointer;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.39);
+  border-radius: 100%;
+}
+
+nav ul.active {
+  transform: translateX(0%);
+}
+
+.nav-close > div::after, .nav-close > div::before {
+  content: "";
+  display: block;
+  width: 35px;
+  padding-bottom: 2px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.nav-close > div::after {
+  transform: rotate(45deg);
+}
+
+.nav-close > div::before {
+  transform: rotate(-45deg);
 }
