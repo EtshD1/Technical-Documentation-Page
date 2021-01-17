@@ -120,3 +120,55 @@ nav ul.active {
 .nav-close > div::before {
   transform: rotate(-45deg);
 }
+
+@media (min-width:800px) {
+  .burger, #navbar > ul > li.nav-close {
+    display: none;
+  }
+  
+  main, section header {
+    padding-top: 5px;
+  }
+  
+  main {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #navbar > header {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  #navbar {
+    position: static;
+    height: 100vh;
+    flex-direction: column;
+    border-right: dimgray 1px solid;
+    max-width: 285px;
+    flex: 0 0 30%;
+    padding: 0;
+  }
+
+  #navbar > ul {
+    position: static;
+    border-left: none;
+    transform: translateX(0%);
+    align-items: baseline;
+    padding: 0;
+    width: 100%;
+  }
+
+  #navbar > ul > li {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    flex-basis: calc(100% / 7);
+  }
+
+  body {
+    display: flex;
+  }
+}
